@@ -5,11 +5,10 @@ import { Signup } from "./pages/auth/Signup";
 import { Login } from "./pages/auth/Login";
 import { AuthContextProvider } from "./Context/Authcontext";
 import { Navbar } from "./components/Navbar";
-import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className=" bg-slate-800 min-h-screen">
+    <div className=" bg-slate-900 min-h-screen">
       <BrowserRouter>
         <AuthContextProvider>
           <Routes>

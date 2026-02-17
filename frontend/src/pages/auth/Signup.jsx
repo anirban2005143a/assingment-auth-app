@@ -101,13 +101,13 @@ export const Signup = () => {
       <ToastContainer />
       <motion.div
         id="signup"
-        className="py-25 min-h-screen overflow-x-hidden bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-4"
+        className="py-25 min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="bg-gray-800 rounded-2xl shadow-xl w-full max-w-md p-8 border border-gray-700"
+          className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl shadow-2xl w-full max-w-md p-8 border border-slate-600"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{
@@ -128,7 +128,7 @@ export const Signup = () => {
             >
               Create Account
             </motion.h1>
-            <motion.p className="text-gray-400" variants={itemVariants}>
+            <motion.p className="text-slate-300" variants={itemVariants}>
               Join us today and start your journey
             </motion.p>
           </motion.div>
@@ -146,7 +146,7 @@ export const Signup = () => {
             >
               <motion.div variants={itemVariants}>
                 <label
-                  className="block text-sm font-medium text-gray-300 mb-1"
+                  className="block text-sm font-medium text-slate-300 mb-1"
                   htmlFor="firstName"
                 >
                   First Name
@@ -161,9 +161,9 @@ export const Signup = () => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className={`block w-full pl-10 pr-3 py-2 bg-gray-700 ${
-                      errors.firstName ? "border-red-500" : "border-gray-600"
-                    } border rounded-lg focus:outline-none text-white placeholder-gray-400`}
+                    className={`block w-full pl-10 pr-3 py-2 bg-slate-600 ${
+                      errors.firstName ? "border-red-500" : "border-slate-500"
+                    } border rounded-lg focus:outline-none text-white placeholder-slate-400`}
                     placeholder="John"
                     whileFocus={inputFocusVariants.focus}
                   />
@@ -187,7 +187,7 @@ export const Signup = () => {
 
               <motion.div variants={itemVariants}>
                 <label
-                  className="block text-sm font-medium text-gray-300 mb-1"
+                  className="block text-sm font-medium text-slate-300 mb-1"
                   htmlFor="lastName"
                 >
                   Last Name
@@ -202,9 +202,9 @@ export const Signup = () => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className={`block w-full pl-10 pr-3 py-2 bg-gray-700 ${
-                      errors.lastName ? "border-red-500" : "border-gray-600"
-                    } border rounded-lg focus:outline-none text-white placeholder-gray-400`}
+                    className={`block w-full pl-10 pr-3 py-2 bg-slate-600 ${
+                      errors.lastName ? "border-red-500" : "border-slate-500"
+                    } border rounded-lg focus:outline-none text-white placeholder-slate-400`}
                     placeholder="Doe"
                     whileFocus={inputFocusVariants.focus}
                   />
@@ -229,7 +229,7 @@ export const Signup = () => {
 
             <motion.div variants={itemVariants}>
               <label
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-slate-300 mb-1"
                 htmlFor="email"
               >
                 Email Address
@@ -244,9 +244,9 @@ export const Signup = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`block w-full pl-10 pr-3 py-2 bg-gray-700 ${
-                    errors.email ? "border-red-500" : "border-gray-600"
-                  } border rounded-lg focus:outline-none text-white placeholder-gray-400`}
+                  className={`block w-full pl-10 pr-3 py-2 bg-slate-600 ${
+                    errors.email ? "border-red-500" : "border-slate-500"
+                  } border rounded-lg focus:outline-none text-white placeholder-slate-400`}
                   placeholder="john.doe@example.com"
                   whileFocus={inputFocusVariants.focus}
                 />
@@ -270,7 +270,7 @@ export const Signup = () => {
 
             <motion.div variants={itemVariants}>
               <label
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-slate-300 mb-1"
                 htmlFor="password"
               >
                 Password
@@ -285,9 +285,9 @@ export const Signup = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className={`block w-full pl-10 pr-3 py-2 bg-gray-700 ${
-                    errors.password ? "border-red-500" : "border-gray-600"
-                  } border rounded-lg focus:outline-none text-white placeholder-gray-400`}
+                  className={`block w-full pl-10 pr-3 py-2 bg-slate-600 ${
+                    errors.password ? "border-red-500" : "border-slate-500"
+                  } border rounded-lg focus:outline-none text-white placeholder-slate-400`}
                   placeholder="••••••••"
                   whileFocus={inputFocusVariants.focus}
                 />
@@ -311,7 +311,7 @@ export const Signup = () => {
 
             <motion.div variants={itemVariants}>
               <label
-                className="block text-sm font-medium text-gray-300 mb-1"
+                className="block text-sm font-medium text-slate-300 mb-1"
                 htmlFor="repeatPassword"
               >
                 Repeat Password
@@ -326,9 +326,9 @@ export const Signup = () => {
                   name="repeatPassword"
                   value={formData.repeatPassword}
                   onChange={handleChange}
-                  className={`block w-full pl-10 pr-3 py-2 bg-gray-700 ${
-                    errors.repeatPassword ? "border-red-500" : "border-gray-600"
-                  } border rounded-lg focus:outline-none text-white placeholder-gray-400`}
+                  className={`block w-full pl-10 pr-3 py-2 bg-slate-600 ${
+                    errors.repeatPassword ? "border-red-500" : "border-slate-500"
+                  } border rounded-lg focus:outline-none text-white placeholder-slate-400`}
                   placeholder="••••••••"
                   whileFocus={inputFocusVariants.focus}
                 />
@@ -354,7 +354,7 @@ export const Signup = () => {
               disabled={isLoading}
               type="submit"
               onSubmit={handleSubmit}
-              className="w-full disabled:cursor-not-allowed cursor-pointer bg-indigo-600 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="w-full disabled:cursor-not-allowed cursor-pointer bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-800 transition-all duration-200 flex items-center justify-center space-x-2"
               variants={itemVariants}
               whileHover="hover"
               whileTap="tap"
@@ -369,7 +369,7 @@ export const Signup = () => {
           </motion.form>
 
           <motion.p
-            className="mt-6 text-center text-sm text-gray-400"
+            className="mt-6 text-center text-sm text-slate-400"
             variants={itemVariants}
           >
             Already have an account?{" "}

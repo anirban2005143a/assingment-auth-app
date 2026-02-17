@@ -9,6 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { showToast } from "../utils/showToast";
 import Loader from "../components/loader/Loader";
+import { Login } from "../pages/auth/Login";
 
 export const AuthContext = createContext();
 
@@ -166,6 +167,8 @@ export const AuthContextProvider = ({ children }) => {
       const token = localStorage.getItem("token");
       const userid = localStorage.getItem("userid");
 
+      console.log(token , userid)
+
       if (!userid) {
         showToast("User ID not found. Please login again.", 0);
         return;
@@ -196,11 +199,6 @@ export const AuthContextProvider = ({ children }) => {
       showToast(error.response?.data?.message || error.message, 0);
       console.error("Error fetching user profile:", error);
     } finally {
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(2);
-        }, 1500);
-      });
       setisAuthenticating(false);
     }
   }, []);
@@ -220,18 +218,20 @@ export const AuthContextProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider
-      value={{
-        isAuthenticated,
-        userData,
-        userLogin,
-        userSignup,
-        validateLoginForm,
-        validateSignupForm,
-        setisAuthenticated,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
+    <>
+      <AuthContext.Provider
+        value={{
+          isAuthenticated,
+          userData,
+          userLogin,
+          userSignup,
+          validateLoginForm,
+          validateSignupForm,
+          setisAuthenticated,
+        }}
+      >
+        {children}
+      </AuthContext.Provider>
+    </>
   );
 };

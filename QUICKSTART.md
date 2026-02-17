@@ -45,7 +45,7 @@ VITE_REACT_BACKEND_URL=http://localhost:5000
 npm run dev
 ```
 
-**Frontend running on**: `http://localhost:5173` (or next available port)
+**Frontend running on**: `http://localhost:5174` (or next available port)
 
 ---
 

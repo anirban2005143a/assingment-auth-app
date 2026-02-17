@@ -138,8 +138,13 @@ const NoteCard = ({
               : "bg-slate-700 text-slate-300 hover:bg-slate-600"
           }`}
         >
-          {isToggling && <Loader size={15} className="animate-spin mx-auto" />}
-          {!isToggling && note.isCompleted ? "Completed" : "Mark Done"}
+          {isToggling ? (
+            <Loader size={15} className="animate-spin mx-auto" />
+          ) : note.isCompleted ? (
+            "Completed"
+          ) : (
+            "Mark Done"
+          )}
         </motion.button>
       </div>
     </motion.div>

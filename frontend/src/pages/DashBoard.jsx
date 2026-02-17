@@ -140,7 +140,7 @@ const DashBoard = () => {
   // Delete note
   const handleDeleteNote = async (noteId) => {
     try {
-      setisDeleting(true);
+      setisDeleting(noteId);
       await axios.delete(
         `${import.meta.env.VITE_REACT_BACKEND_URL}/api/notes/${noteId}`,
         {
@@ -161,7 +161,7 @@ const DashBoard = () => {
   // Toggle note completion
   const handleToggleComplete = async (noteId, currentStatus) => {
     try {
-      setisToggling(true);
+      setisToggling(noteId);
       const response = await axios.put(
         `${import.meta.env.VITE_REACT_BACKEND_URL}/api/notes/${noteId}`,
         { isCompleted: !currentStatus },
@@ -428,8 +428,8 @@ const DashBoard = () => {
                       onToggleComplete={() =>
                         handleToggleComplete(note._id, note.isCompleted)
                       }
-                      isDeleting={isDeleting}
-                      isToggling={isToggling}
+                      isDeleting={isDeleting === note._id}
+                      isToggling={isToggling === note._id}
                     />
                   </motion.div>
                 ))}

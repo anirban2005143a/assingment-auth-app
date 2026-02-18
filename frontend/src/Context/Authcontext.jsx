@@ -108,6 +108,7 @@ export const AuthContextProvider = ({ children }) => {
           localStorage.setItem("token", response?.data?.token);
           localStorage.setItem("userid", response?.data?.userid);
           localStorage.setItem("email", response?.data?.email);
+          setuserData(response?.data?.user || null)
           // showToast(response.data.message, 1);
           navigate("/");
         }
@@ -147,6 +148,7 @@ export const AuthContextProvider = ({ children }) => {
           localStorage.setItem("token", response?.data?.token);
           localStorage.setItem("userid", response?.data?.userid);
           localStorage.setItem("email", response?.data?.email);
+          setuserData(response?.data?.user || null)
           navigate("/");
         }
       } catch (error) {
